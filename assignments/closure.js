@@ -1,6 +1,21 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+let age = 0;
+const ageCounter = () => {
+  
+  return function() {
+    return age+= 5; 
+  }
+}
+
+const newAge = ageCounter();
+console.log(newAge());
+console.log(newAge());
+console.log(newAge());
+console.log(age);
+
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
