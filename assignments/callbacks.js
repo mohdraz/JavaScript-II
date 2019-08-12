@@ -86,4 +86,37 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+
+  cb(array.filter( (item, index) => {
+    array.indexOf(item) !== index;
+  }));
 }
+items.push('Gum', 'Pencil');
+
+items.filter( (item, index) => {
+  console.log(items.indexOf(item) === index);
+});
+
+removeDuplicates(items, function (filtered) {
+  console.log("This array is duplicate free:" + filtered)
+});
+
+/*
+items.push('Gum', 'Pencil');
+console.log(items);
+const uniqueSet = new Set(items);
+const backToArray = [...uniqueSet];
+
+console.log(uniqueSet);
+console.log(backToArray);
+
+console.log(items.indexOf(items));
+
+items.filter ((item, index) => {
+  // console.log(item);
+  // console.log(index);
+  console.log(items[index] + " is index: " + items.indexOf(item));
+  console.log(items.indexOf(item) === index);
+});
+
+*/
